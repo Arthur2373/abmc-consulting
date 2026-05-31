@@ -211,3 +211,94 @@ footer {
     color: #64748b;
     font-size: 14px;
 }
+
+/* =========================================================
+   10. MOBILE & RESPONSIVE STYLES (Fix for issue seen in PHOTO-2026-05-31-13-21-17.jpg)
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+    /* 2. NAVIGATION (Mobile specific styles) */
+    .nav-container {
+        flex-direction: column; /* Pile le logo et les liens */
+        align-items: center;
+        text-align: center;
+        padding: 10px 5%;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        position: static; /* Supprime le positionnement absolu */
+        font-size: 24px;
+    }
+
+    .logo span {
+        position: static;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Garde les liens horizontaux sur tablettes */
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 480px) {
+        .nav-links {
+            flex-direction: column; /* Pile complètement les liens sur petits téléphones */
+            gap: 10px;
+        }
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* 3. HERO SECTION (Correction mobile pour PHOTO-2026-05-31-13-21-17.jpg) */
+    .hero {
+        padding: 40px 5%; /* Moins de padding */
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px; /* Titre plus petit */
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 16px; /* Texte plus petit */
+        max-width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Pile les boutons verticalement */
+        gap: 15px;
+        align-items: center; /* Centre les boutons pilés */
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 80%; /* Donne la même largeur aux deux boutons pilés */
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    /* 4. PITCH SECTION (Ajustement de l'étape 11) */
+    .pitch-container {
+        padding: 40px 5%;
+    }
+
+    .pitch-grid {
+        gap: 20px;
+    }
+
+    /* 9. ABOUT SECTION (Ajustement de l'étape 11) */
+    .about-container {
+        padding: 40px 5%;
+    }
+}
